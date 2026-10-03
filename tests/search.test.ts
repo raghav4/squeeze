@@ -1,0 +1,4 @@
+import {it,expect} from 'vitest';
+import {searchTabs} from '../src/lib/client';
+import {blank,snapshot} from '../src/lib/engine';
+it('searches category/session names and 1000 records quickly',()=>{const s=blank();s.categories=[{id:'c',name:'Learning',createdAt:0}];s.sessions=[{id:'s',name:'Research',createdAt:0}];s.parked=Array.from({length:1000},(_,i)=>({...snapshot({id:i,url:`https://example.com/${i}`,title:`Tab ${i}`,windowId:1,index:i,pinned:false}),categoryId:'c',sessionId:'s'}));const start=performance.now();expect(searchTabs(s.parked,'learning',s)).toHaveLength(1000);expect(searchTabs(s.parked,'research',s)).toHaveLength(1000);expect(searchTabs(s.parked,'Tab 999',s)).toHaveLength(1);const elapsed=performance.now()-start;console.log(`1000-record category/session/title searches: ${elapsed.toFixed(2)}ms`);expect(elapsed).toBeLessThan(100)});
