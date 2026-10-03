@@ -1,14 +1,14 @@
 # feat: ship local-first Squeeze tab parking MVP
 
 ## Summary
-A polished MV3 Chrome extension for closing tabs without losing them. Save, verify, then close. The Side Panel is the main surface; a compact popup is the entry point.
+A polished MV3 Chrome extension for closing tabs without losing them. Save, verify, then close. The full app tab is the main surface, with an optional Side Panel; a compact popup is the entry point.
 
 ## Changes
 - Actual GitHub Spec Kit scaffold, constitution, spec, research, plan, contracts and tasks.
 - Serialized local state engine, persistence read-back, URL race check, safe URL handling.
 - Single/multiple/current-window/group parking, reopen ordering, pinned state, Chrome groups.
 - Categories, sessions, stars, text search, delete/undo, best-effort recent-close records.
-- Side Panel, lightweight popup, command palette, shortcuts and minimal context menu.
+- Full app tab, optional Side Panel, quick-action popup, command palette, shortcuts and minimal context menu.
 - CI, test scripts, local-only privacy documentation and honest follow-up list.
 
 ## Verification
@@ -22,7 +22,7 @@ A polished MV3 Chrome extension for closing tabs without losing them. Save, veri
 ## Screenshots
 These two renders use **labeled sample data**, not user browsing history.
 
-![Side Panel](screenshots/sidepanel.png)
+![Full app](screenshots/full-app.png)
 ![Popup](screenshots/popup.png)
 
 ## Limits

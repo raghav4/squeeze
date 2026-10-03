@@ -4,7 +4,7 @@ Status: P0 implemented and locally tested. Partial P1/P2. Not full product conve
 
 ## Passed
 - 12 unit tests, strict TypeScript, production Vite + worker build.
-- Real Chromium extension worker, discovery, squeeze 2 real web tabs, reopen 2, retained records after full browser restart.
+- Real Chromium full app tab, popup opens app tab, extension worker, discovery, squeeze 2 real web tabs, reopen 2, retained records after full browser restart.
 - Rendered panel/popup pixels inspected. Improved secondary-text contrast and re-rendered. No 360px horizontal overflow.
 - UI selection/squeeze, popup squeeze, command palette open/close.
 - Three searches of 1,000 records took 11ms on the initial machine run, under 100ms target.
@@ -22,3 +22,6 @@ Status: P0 implemented and locally tested. Partial P1/P2. Not full product conve
 - Full 47-tab end-to-end performance outcome not yet measured.
 
 No Web Store publishing performed. No browser history or private user data in screenshot fixtures.
+
+## User-directed design revision
+Full app in a Chrome tab is now primary. Optional Side Panel remains. Popup stays quick actions. Typography is locally bundled Inter under SIL OFL, inspired by inspected public animations.dev examples. Count/result/press transitions are short and respect reduced motion. Full-app and popup renders re-inspected.

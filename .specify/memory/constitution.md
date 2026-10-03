@@ -6,7 +6,7 @@ A tab must never be closed until its complete saved record has been persisted an
 ### II. Local, deterministic, private
 No backend, account, network service, analytics, AI, page scraping, or automatic deletion. Browser metadata is sufficient. Incognito data is excluded. Every organization choice is explicit or domain-based.
 ### III. Calm, reversible UX
-The primary surface is a polished Side Panel. Purple is restrained. Keyboard focus, readable labels, reduced motion, and honest error states are required. Destructive saved-record removal offers undo.
+The primary surface is a polished full app in a Chrome tab; Side Panel is optional. Purple is restrained. Keyboard focus, readable labels, reduced motion, and honest error states are required. Destructive saved-record removal offers undo.
 ### IV. Tests before trust
 Storage failures, partial closes, concurrent requests, navigation races, and restart persistence must be tested. Real Chrome integration checks are separate from browser previews and API mocks.
 ### V. Focused delivery
@@ -18,4 +18,4 @@ Type checking, automated tests, production build, privacy review, and rendered U
 ## Governance
 Amendments require a documented rationale and a version bump. Each change is checked against these principles and its feature specification. Violations must be fixed or explicitly accepted before release.
 
-**Version**: 1.0.0 | **Ratified**: 2026-10-03 | **Last Amended**: 2026-10-03
+**Version**: 1.1.0 | **Ratified**: 2026-10-03 | **Last Amended**: 2026-10-03

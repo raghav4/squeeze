@@ -50,7 +50,7 @@ A small popup opens the main Side Panel. The user can use a command palette, sho
 - **FR-006**: Explicit delete offers undo. No automatic deletion of parked records.
 - **FR-007**: Search and organization are local and deterministic; categories and sessions are user-created.
 - **FR-008**: Provide recently squeezed and best-effort recently closed views without promising complete browser history.
-- **FR-009**: Side Panel is primary; popup is a small entry point. No external scripts, fonts, crawlers, analytics, or accounts.
+- **FR-009**: Full Chrome app tab is primary (user revision); optional Side Panel and popup is a small entry point. No external scripts, fonts, crawlers, analytics, or accounts.
 - **FR-010**: Provide status feedback and truthful partial-failure messages. Unsupported tabs remain open.
 - **FR-011**: Use reduced-motion preferences, named controls, visible focus, keyboard actions, and responsive spacing.
 - **FR-012**: Local browsing metadata must never be transmitted to a server. No incognito capture.
@@ -67,6 +67,6 @@ SavedTab, ChromeGroupSnapshot, Category, Session, Settings, ObservedTab, UndoBat
 
 ## Assumptions
 - Chrome desktop 116+; no mobile browser support. Only http/https tabs are parked in this release.
-- Side Panel is implemented early despite its product P2 priority because it is the requested primary surface.
+- User revision: full management app opens in a Chrome tab, popup is quick actions only; Side Panel remains optional.
 - First delivery prioritizes product P0 with selected organization/UX features. P3 is an explicit follow-up, not silently claimed complete.
 - Recently closed records retain the latest 100 observed closures; parked records have no automatic expiry.

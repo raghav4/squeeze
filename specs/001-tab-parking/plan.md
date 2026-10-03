@@ -2,7 +2,7 @@
 **Branch**: `001-tab-parking` | **Date**: 2026-10-03 | **Spec**: [spec.md](spec.md)
 
 ## Summary
-TypeScript/React MV3 extension. The worker is the sole durable state writer. Interfaces send typed messages. Parking is snapshot -> storage write -> read-back -> live URL recheck -> close, with partial failures reported. UI uses local CSS, icons, restrained spring transitions.
+TypeScript/React MV3 extension. The worker is the sole durable state writer. Full app tab, compact popup and optional Side Panel send typed messages. Parking is snapshot -> storage write -> read-back -> live URL recheck -> close, with partial failures reported. UI uses locally bundled Inter, CSS, icons, restrained spring transitions.
 
 ## Technical Context
 **Language/Version**: TypeScript 5, React 19, Chrome 116+.

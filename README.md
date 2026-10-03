@@ -15,7 +15,7 @@ npm run build
 
 Open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select `dist/`.
 
-Click the toolbar icon, then **Open Squeeze** for the Side Panel. Use ordinary test tabs first. URLs and titles are saved, not unsaved forms, page history, authentication state, or scroll positions.
+Click the toolbar icon, then **Open Squeeze** for the full management app in its own Chrome tab. The Side Panel remains an optional compact view. Use ordinary test tabs first. URLs and titles are saved, not unsaved forms, page history, authentication state, or scroll positions.
 
 ## Included
 - Tab discovery, selection, single/bulk/current-window/group parking.
@@ -23,7 +23,7 @@ Click the toolbar icon, then **Open Squeeze** for the Side Panel. Use ordinary t
 - Reopen saved tabs without removing the saved copy; pinned state and group metadata.
 - Categories, sessions, stars, local search, recently squeezed list.
 - Best-effort recently closed record for observed regular web tabs (latest 100).
-- Side Panel, compact popup, command palette, keyboard shortcuts, context menu.
+- Full app tab, optional Side Panel, compact popup, command palette, keyboard shortcuts, context menu.
 - Delete saved records with undo in the current panel session.
 
 Only `http:` and `https:` tabs are supported for parking. Incognito and internal browser tabs stay open. Tab groups are restored where Chrome supports them. Reopening to the original window is not implemented yet.
@@ -45,7 +45,7 @@ UI previews use labeled sample data. `npm run dev` does **not** control live bro
 
 Real Chrome integration covers worker loading, tab discovery, save/close, reopen, and persistence across full browser restart. Unit tests cover persistence failure, read-back failure, URL navigation race, partial failures, concurrent requests, safe schemes, pin/order/group restoration, and local search.
 
-![Side Panel, sample-data preview](docs/screenshots/sidepanel.png)
+![Full app, sample-data preview](docs/screenshots/full-app.png)
 ![Popup, sample-data preview](docs/screenshots/popup.png)
 
 ## Spec-driven workflow
@@ -58,3 +58,6 @@ Uninstalling Squeeze removes its local extension data. Export/backup is not impl
 
 ## Scope
 This is an initial testable build, not a Chrome Web Store release. Full onboarding, backup/import/export, advanced window restoration, favicon rendering, hover previews, list grouping by date/domain, and complete accessibility audits remain follow-up work.
+
+## Design
+Typography and motion direction studied from the public examples at https://animations.dev. Inter is bundled locally under SIL OFL (docs/licenses/Inter-OFL.txt). No remote font, paid course content, or site assets are loaded by the extension.
