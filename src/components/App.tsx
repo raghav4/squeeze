@@ -3,8 +3,7 @@ import {AnimatePresence,motion,useReducedMotion} from 'motion/react';
 import {Archive,ArrowUpRight,Check,ChevronDown,Command,Folder,Layers,MoreHorizontal,PanelLeft,Plus,Search,SlidersHorizontal,Star,Trash2,X,Pin,RotateCcw,ExternalLink,Copy,CheckCircle2} from 'lucide-react';
 import {domain,preview,request,searchTabs} from '../lib/client';
 import type {Overview,SavedTab,LiveTab,Command as Cmd,Result} from '../types';
-function Mark(){return <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="10" fill="#7353d6"/><path d="M22 9H13a4 4 0 0 0 0 8h6a4 4 0 0 1 0 8H10M24 13H14M8 21h10" stroke="white" strokeWidth="2.8" strokeLinecap="round" fill="none"/></svg>}
-export {Mark};
+import {Mark} from './Mark';
 type View='open'|'parked'|'starred'|'recent'|'sessions';
 export function App(){
  const [data,setData]=useState<Overview>();const [view,setView]=useState<View>('parked');const [q,setQ]=useState('');const [filter,setFilter]=useState<string|null>(null);const [selected,setSelected]=useState<Set<string>>(new Set());const [busy,setBusy]=useState(false);const [status,setStatus]=useState('');const [error,setError]=useState('');const [palette,setPalette]=useState(false);const [undo,setUndo]=useState<SavedTab[]>([]);const [menu,setMenu]=useState<string|null>(null);const [dialog,setDialog]=useState<{type:'category'|'session';id?:string;name:string}|null>(null);const [help,setHelp]=useState(false);const reduced=useReducedMotion();const searchRef=useRef<HTMLInputElement>(null);

@@ -1,7 +1,7 @@
 import {useEffect,useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {Archive,ArrowUpRight,ShieldCheck} from 'lucide-react';
-import {Mark} from './components/App';
+import {Mark} from './components/Mark';
 import {openPanel,preview,request} from './lib/client';
 import type {Overview,Result} from './types';
 import './styles.css';
