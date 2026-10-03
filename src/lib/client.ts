@@ -19,3 +19,5 @@ export function domain(url:string){try{return new URL(url).hostname.replace(/^ww
 export function searchTabs(tabs:SavedTab[],q:string,s:Store){const query=q.trim().toLowerCase();return tabs.filter(t=>[t.title,t.url,domain(t.url),s.categories.find(c=>c.id===t.categoryId)?.name||'',s.sessions.find(c=>c.id===t.sessionId)?.name||''].join(' ').toLowerCase().includes(query))}
 export async function openPanel(){if(preview){location.href='/sidepanel.html';return}const w=await chrome.windows.getCurrent();await chrome.sidePanel.open({windowId:w.id!});window.close()}
 export type {Result};
+
+export async function openApp(){if(preview){location.href="/app.html";return}await chrome.tabs.create({url:chrome.runtime.getURL("app.html")});window.close()}
